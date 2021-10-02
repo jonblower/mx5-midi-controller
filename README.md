@@ -38,3 +38,13 @@ but you could edit the code to emit other messages. See the [MX5 manual](https:/
 Note that when a switch is pressed:
  1. we check to make sure the same switch hasn't been pressed very recently, to avoid unwanted "double presses" (de-bouncing)
  2. we send a "high" CC message, *immediately* followed by a "low" CC message, as the MX5 seems to respond to the "low" message. We don't wait for the footswitch to be released before sending the "low" message.
+
+## The hardware
+
+The footswitch itself consists of four individual switches enclosed in a JP1590BB aluminium enclosure (Approx 119.5 x 94 mm x 34 mm), purchased from [Jed's Peds](https://www.jedspeds.co.uk/product-page/jp150bb-enclosure). A toggle switch connects and disconnects the battery from the Arduino, and a 3.5mm jack acts as the MIDI out port.
+
+## Notes for the future
+
+If I ever get around to making a version 2, I would do the following:
+ * Add a status LED showing whether the unit is recording, overdubbing, playing or stopped. As the MX5 does not communicate its state, this would have to be inferred from the footswitches that have been pressed.
+ * Remove the on-board LED from the Arduino, as this just drains power.
