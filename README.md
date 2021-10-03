@@ -17,7 +17,7 @@ Hence I wanted to create a footswitch that triggers the looper as soon as it is 
 The circuit is pretty simple:
  * It is based around an **Arduino Pro Mini 3.3V** (8MHz). This is the lower-voltage version of the Pro Mini and contains only a minimal set of on-board equipment, which is useful for conserving power.
  * **Power** comes from a set of 3x1.5V batteries, wired between GND and RAW, via a toggle switch.
- * The **footswitches** are connected between GND and the input/output pins. (I don't think it matters much which of these pins you pick, as long as they match the pins you use in the code, of course. The schematic below shows the use of 4 arbitrary pins, but you can pick others.)
+ * The **footswitches** are momentary (non-latching) push-to-make switches. connected between GND and the input/output pins. (I don't think it matters much which of these pins you pick, as long as they match the pins you use in the code, of course. The schematic below shows the use of 4 arbitrary pins, but you can pick others.)
  * The **MIDI signal** is sent out through a 3.5mm TRS jack socket. The MX5's MIDI ports are also jack sockets (not DIN connectors), so the footswitch can be connected to the MX5 simply through a standard aux cable. Since we are working at 3.3V, we use 10 and 33 ohm resistors. See the schematic below for more details.
 
 <img src="schematic.png" width="400" />
